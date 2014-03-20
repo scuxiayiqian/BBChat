@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/set_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/preference_first_item"
+            android:clickable="true"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/set_tv_name"
+                android:textColor="#333"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/name"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/set_et_name"
+                android:textColor="#333"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_alignBaseline="@id/set_tv_name"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@id/set_tv_name"
+                android:hint="@string/name"
+                android:inputType="text"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/preference_item"
+            android:clickable="true"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/set_tv_macad"
+                android:textColor="#333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/macad"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/set_tv_macad_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/set_tv_macad"
+                android:layout_marginBottom="20dp"
+                android:layout_toRightOf="@id/set_tv_macad"
+                android:text="@string/macad"
+                android:textColor="#333"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/preference_item"
+            android:clickable="true"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:textColor="#333"
+                android:id="@+id/set_tv_theme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/theme"
+                android:layout_marginLeft="20dp"
+                
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/set_rg_theme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                
+                android:layout_below="@id/set_tv_theme"
+                android:contentDescription="@string/dialogtheme" >
+
+                <RadioButton
+                    android:id="@+id/radio1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:textColor="#333"
+                    android:text="普通风格" >
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/radio2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#333"
+                    android:text="@string/specialtheme" >
+                </RadioButton>
+            </RadioGroup>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/preference_item"
+            android:clickable="true"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/headimage"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="头像"
+                android:textColor="#333"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:id="@+id/set_iv_ico"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_alignLeft="@+id/set_btn_ico"
+                android:layout_alignParentTop="true"
+                android:padding="8dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/app_icon" />
+
+            <Button
+                android:id="@+id/set_btn_ico"
+                android:background="@drawable/btn_style_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/set_iv_ico"
+                android:layout_centerHorizontal="true"
+                android:padding="8dp"
+                android:text="@string/ico"
+                android:textColor="#333"
+                android:textSize="17sp" 
+                android:layout_marginBottom="20dp"
+                />
+
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/preference_last_item"
+            android:clickable="true"
+            android:gravity="center_vertical" >
+
+            <Button
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_style_white"
+                android:id="@+id/set_btn_background"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="8dp"
+                android:text="更换背景图片"
+                android:textColor="#333"
+                android:textSize="17sp" />
+
+           
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
